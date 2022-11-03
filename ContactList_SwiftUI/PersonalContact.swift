@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct PersonalContact: View {
+    
+    let person: Person
+    
     var body: some View {
-        Text("тут данные одного юзера при переходе с ContactList")
-    }
+        Image(systemName: "person.fill")
+          
+}
 }
 
 struct PersonalContact_Previews: PreviewProvider {
     static var previews: some View {
-        PersonalContact()
+       PersonalContact(person: <#T##Person#>)
     }
 }

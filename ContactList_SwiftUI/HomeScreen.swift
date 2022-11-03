@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    let personsList = Person.getPersonData()
+    
     var body: some View {
         TabView {
-            ContactList()
+            ContactList(listName: "ContactList", persons: Person.getPersonData())
                 .tabItem {
                     Label("Contacts", systemImage: "person.3.fill")
                 }

@@ -39,5 +39,6 @@ class DataManager {
                          "956345826",
                          "195635782"]
     
+    private init() {}
 }
 

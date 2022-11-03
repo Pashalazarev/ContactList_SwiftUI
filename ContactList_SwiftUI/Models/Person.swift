@@ -8,14 +8,15 @@
 import Foundation
 
 
-struct Person {
+struct Person: Identifiable {
+    let id : Int
     let name: String
     let surname: String
     let emails: String
     let mobileNumbers: String
     
     var fullName: String {
-        "\(name) + \(surname)"
+        "\(name) \(surname)"
     }
 }
 extension Person {
@@ -31,10 +32,13 @@ extension Person {
         
         
         for index in 0..<names.count {
-            let person = Person(name: names[index],
-                                surname: surnames[index],
-                                emails: emails[index],
-                                mobileNumbers: mobileNumbers[index])
+            let person = Person(
+                id: index + 1,
+                name: names[index],
+                surname: surnames[index],
+                emails: emails[index],
+                mobileNumbers: mobileNumbers[index]
+            )
             persons.append(person)
         }
         return persons
